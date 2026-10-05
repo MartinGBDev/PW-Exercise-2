@@ -1,0 +1,129 @@
+:root{
+    --bg-color: #393C3E;
+    --bg-color-menu: #1C6087;
+    --bg-color-section:#D5E6F5;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+/*######################       HEADER       #####################*/
+
+header{
+    height: 30vh;
+    background-image: url(assets/banner.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/*######################       MAIN       #####################*/
+
+main{
+    height: 65;
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+}
+section{
+    flex-grow: 4;
+    background-color: var(--bg-color-section);
+    text-align: justify;
+    font-weight: lighter;
+    font-size: larger;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+#formulario_section{
+    display: none;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-top: 2rem;
+   
+    
+}
+
+#formulario_container{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    border: solid 1px #000;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    margin-top: 2rem;
+    padding: 2rem;
+  
+    
+}
+#formulario_container h3{
+    position: absolute;
+    top:-20px;
+    left: 10px;
+    background-color: var(--bg-color-section);
+}
+form{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+form >div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+input{
+    margin-top: 5px;
+    width: 50%;
+    height: 30px;
+    
+    
+}
+#button_container{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    flex-grow: 1;
+}
+button{
+    font-size: large;
+    margin-left: 20px;
+    padding: 5px;
+}
+nav{
+    background-color: var(--bg-color-menu);
+    flex-grow: 2;
+    min-width: max-content;
+    max-width: 10vh;
+    padding-top: 5rem;
+}
+.nav_bar__item{
+    margin: 1rem;
+    color: #ee5;
+    text-decoration: underline;
+    
+}
+.nav_bar__item:hover{
+    color: #fff;
+}
+
+
+/*######################       FOOTER       #####################*/
+
+footer{
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+}
