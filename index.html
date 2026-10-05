@@ -39,21 +39,21 @@
             </article>
         </section>
         <section id="formulario_section">
-                <h2>Formulario de registro</h2>
-                
-                <div id="formulario_container">
-                    <h3>Entrada de datos</h3>
-                    <form action="" method="post" id="register_form">
+            <h2>Formulario de registro</h2>
+            
+            <div id="formulario_container">
+                <h3>Entrada de datos</h3>
+                <form action="" method="post" id="register_form">
                         
-                            <div class="form_item"><label for="name_input">Nombre</label> <input type="text" name="" id="name_input" required></div>
-                            <div class="form_item"><label for="ci_input">CI</label> <input type="text" name="" id="ci_input" required></div>
-                            <div class="form_item"><label for="password_input">Contrasena</label> <input type="password" name="" id="password_input" required></div>
-                            <div class="form_item"><label for="password_confirm_input">Confirmacion</label> <input type="text" name="" id="password_confirm_input" required></div>
-                            
+                            <div class="form_item"><label for="name_input">Nombre</label> <input type="text" name="" id="name_input"><div class="error" id="empty_field_name" >No puede estar vacio</div></div>
+                            <div class="form_item"><label for="ci_input">CI</label> <input type="text" name="" id="ci_input"> <div id="ci_error" class="error">Debe contener 11 digitos</div id='caracteres_error' class="error"></div><div>Solo debe contener digitos 0-9</div>
+                            <div class="form_item"><label for="password_input">Contrasena</label> <input type="password" name="" id="password_input"><div class="error"  id="empty_field_password">No puede estar vacio</div></div>
+                            <div class="form_item"><label for="password_confirm_input">Confirmacion</label> <input type="text" name="" id="password_confirm_input"><div class="error" id="password_error" >Las contrasenas deben coincidir</div>
+                            </div>
 
-                    </form> 
+                </form> 
                     <div id="button_container">
-                            <button type="submit" form="register_form">Enviar</button>
+                            <button type="submit" form="register_form" id="accept_button">Enviar</button>
                             <button id="clear_button">Limpiar</button>
                     </div>
                 </div>
