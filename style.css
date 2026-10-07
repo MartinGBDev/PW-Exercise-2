@@ -81,26 +81,32 @@ form{
     flex-direction: column;
     justify-content: space-around;
 }
+
+.form_item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.input_container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 .error{
     display: none;
     color: #f33;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
+    position: relative;
+    top: 35px;
     font-size: medium;
     
 }
 
-form >div{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
+
 
 
 input{
     margin-top: 5px;
-    width: 50%;
+    width: 80%;
     height: 30px;
     font-size: large;
     
