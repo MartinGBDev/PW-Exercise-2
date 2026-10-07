@@ -13,7 +13,6 @@ formularioNav.addEventListener("click",()=>{document.getElementById("inicio_sect
 clearButton.addEventListener("click",()=>{document.querySelectorAll("input").forEach(input =>input.value='')})
 
 form.addEventListener("submit",(e)=>{
-    e.preventDefault()
     const nameInput = document.getElementById("name_input")
     const ciInput = document.getElementById("ci_input")
     const passwordInput = document.getElementById("password_input")
@@ -22,7 +21,7 @@ form.addEventListener("submit",(e)=>{
     const passwordError = document.getElementById("password_error")
     const errorName = document.getElementById("empty_field_name")
     const emptyPasswordError = document.getElementById("empty_field_password")
-    const caracteresError = document.getElementById("caracteres_error");
+    const caracteresError = document.getElementById('caracteres_error');
 
     errorName.style.display = "none"
     ciError.style.display = "none"
@@ -32,23 +31,30 @@ form.addEventListener("submit",(e)=>{
 
     if(nameInput.value == ''){
         errorName.style.display = "block"
+        e.preventDefault()
     }
 
     if(ciInput.value.length !== 11){
         ciError.style.display = "block"
+        e.preventDefault()
     }
-    /*TO-DO solo digitos 0-9 validacion
-    if(/^[0-9]+$/.test(ciInput.value)){
-        
+    
+    if(isNaN(ciInput.value)){
+        ciError.style.display = 'none'
+        caracteresError.style.display = 'block'
+        e.preventDefault()
+
     }
-    */ 
+    
 
 
     if(passwordInput.value.length == 0){
         emptyPasswordError.style.display ="block"
+        e.preventDefault()
     }
     if(passwordInput.value !== passwordConfirmInput.value){
         passwordError.style.display = "block"
+        e.preventDefault()
         
     }
 
