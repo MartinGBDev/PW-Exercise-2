@@ -30,18 +30,18 @@ form.addEventListener("submit",(e)=>{
     caracteresError.style.display = 'none'
 
     if(nameInput.value == ''){
-        errorName.style.display = "block"
+        errorName.style.display = "flex"
         e.preventDefault()
     }
 
     if(ciInput.value.length !== 11){
-        ciError.style.display = "block"
+        ciError.style.display = "flex"
         e.preventDefault()
     }
     
     if(isNaN(ciInput.value)){
         ciError.style.display = 'none'
-        caracteresError.style.display = 'block'
+        caracteresError.style.display = 'flex'
         e.preventDefault()
 
     }
@@ -49,11 +49,11 @@ form.addEventListener("submit",(e)=>{
 
 
     if(passwordInput.value.length == 0){
-        emptyPasswordError.style.display ="block"
+        emptyPasswordError.style.display ="flex"
         e.preventDefault()
     }
     if(passwordInput.value !== passwordConfirmInput.value){
-        passwordError.style.display = "block"
+        passwordError.style.display = "flex"
         e.preventDefault()
         
     }
